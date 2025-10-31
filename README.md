@@ -78,4 +78,4 @@ Contributions are welcome! If you have suggestions or want to improve the model,
 ---
 ##### The model can make mistake. Check for critical information.
 
-#### Copyright &copy; 2023. Done by Dawit Esubalew Kunta.
+#### Copyright &copy; 2023. Done by  Esubalew Kunta.
