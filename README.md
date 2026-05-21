@@ -1,81 +1,93 @@
+# Amharic Hate Speech Detection
+
+Hate speech classifier for Amharic text, built by fine-tuning mBERT on 30,000 labeled samples.
+Accuracy: 91.59% | F1: 0.9172
+
+---
 
 ## Overview
-This repository presents a Hate Speech Detection Model for the Amharic language, fine-tuned from the multilingual BERT (mBERT) model. Leveraging the HuggingFace Trainer API, this model is specifically designed to detect hate speech in Amharic with high accuracy and precision.
 
-### Key Features
-- Fine-tuned mBERT Model: Built on Davlan's bert-base-multilingual-cased-finetuned-amharic from Hugging Face.
-- HuggingFace Trainer API: Streamlined training and evaluation process.
-- High Performance: Achieved impressive metrics on a comprehensive dataset.
+Amharic has over 57 million speakers but very few NLP tools. Most hate speech detection models are built for English or other widely spoken languages, which means harmful content in Amharic goes undetected on social media.
+
+I built this classifier to help close that gap. It takes an Amharic sentence as input and returns a label: hate speech or not hate speech.
 
 ---
 
 ## Model Details
-### Model Architecture
-- Base Model: Davlan's bert-base-multilingual-cased-finetuned-amharic (pretrained multilingual BERT).
-- Fine-tuned Task: Sequence classification for Amharic hate speech detection.
 
-### Training Parameters
+### Architecture
+
+- Base model: Davlan/bert-base-multilingual-cased-finetuned-amharic
+- Task: Binary sequence classification
+
+### Training
+
 - Epochs: 15
-- Learning Rate: 5e-5
+- Learning rate: 5e-5
+- Training framework: HuggingFace Trainer API
 
-### Performance Metrics
-- F1-Score: 0.9172
-- Accuracy: 91.59%
+### Results
+
+| Metric | Score |
+|---|---|
+| Accuracy | 91.59% |
+| F1 Score | 0.9172 |
 
 ---
 
 ## Dataset
-The model was fine-tuned using a dataset sourced from Mendeley Data. The dataset consists of 30,000 labeled instances, making it one of the most comprehensive datasets for Amharic hate speech detection.
 
-### Dataset Overview
-- Total Samples: 30,000
-- Source: Mendeley Data Repository
-- Language: Amharic
+The model was trained on a dataset from Mendeley Data containing 30,000 labeled Amharic sentences.
+
+| Field | Details |
+|---|---|
+| Total samples | 30,000 |
+| Source | Mendeley Data Repository |
+| Language | Amharic |
 
 ---
 
 ## Installation
 
-### Prerequisites
-Ensure you have the following installed on your machine:
+**Requirements**
+
 - Python 3.8+
 - Jupyter Notebook
 
-### Steps
+**Steps**
+
 1. Clone the repository:
-      git clone https://github.com/Esubalew-kunta/amharic-hate-speech-detection.git
-   
-2. Navigate to the project directory:
-      cd amharic-hate-speech-detection-using-ML
-   
-3. Launch Jupyter Notebook:
-      jupyter notebook
-   
-4. Open and run the notebook file:
-   
+   git clone https://github.com/Esubalew-kunta/amharic-hate-speech-detection.git
+2. Go into the project folder:
+   cd amharic-hate-speech-detection-using-ML
+3. Start Jupyter:
+   jupyter notebook
+4. Open and run:
    Hate_speech_detection_using_amharic_language.ipynb
-   
+---
+
+## Using the model
+
+You can also run this in Google Colab. The notebook walks through loading the model, preparing Amharic text input, and getting predictions. Each step has comments explaining what is happening.
 
 ---
 
-## Model Usage
-To use this model for Amharic hate speech detection, you can follow the steps in the Google Colab notebook to load and test the model on new data. The notebook includes all necessary instructions for:
+## What I plan to add
 
-- Loading the fine-tuned mBERT model.
-- Preprocessing Amharic text data.
-- Making predictions on new instances.
-
+The current model only does binary classification. I want to extend it to detect the type of hate speech, for example ethnicity-based or religion-based content. I also plan to push the trained model to Hugging Face so other researchers working on Ethiopian languages can load it directly.
 
 ---
 
 ## Contributing
-Contributions are welcome! If you have suggestions or want to improve the model, feel free to fork the repository and submit a pull request.
+
+If you want to test it on a different dataset or improve the training setup, feel free to fork and open a pull request.
 
 ---
 
-## Acknowledgments
-- Dataset Contributors: Special thanks to the contributors who provided labeled Amharic text datasets.
----
-##### The model can make mistake. Check for critical information.
+## Note
 
-#### Copyright &copy; 2023. Done by  Esubalew Kunta.
+The model can make mistakes, especially on sentences that mix Amharic with other languages or use informal slang. Do not use it in any real system without additional testing.
+
+---
+
+*Esubalew Kunta, 2024*
