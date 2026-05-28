@@ -5,6 +5,13 @@ Accuracy: 91.59% | F1: 0.9172
 
 ---
 
+## Live Demo
+
+Try the model in your browser — no code needed:
+https://huggingface.co/spaces/esubalew-kunta/amharic-hate-speech-detector
+
+---
+
 ## Overview
 
 Amharic has over 57 million speakers but very few NLP tools. Most hate speech detection models are built for English or other widely spoken languages, which means harmful content in Amharic goes undetected on social media.
@@ -57,13 +64,21 @@ The model was trained on a dataset from Mendeley Data containing 30,000 labeled 
 **Steps**
 
 1. Clone the repository:
-   git clone https://github.com/Esubalew-kunta/amharic-hate-speech-detection.git
+
+        git clone https://github.com/Esubalew-kunta/amharic-hate-speech-detection.git
+
 2. Go into the project folder:
-   cd amharic-hate-speech-detection-using-ML
+
+        cd amharic-hate-speech-detection-using-ML
+
 3. Start Jupyter:
-   jupyter notebook
+
+        jupyter notebook
+
 4. Open and run:
-   Hate_speech_detection_using_amharic_language.ipynb
+
+        Hate_speech_detection_using_amharic_language.ipynb
+
 ---
 
 ## Using the model
@@ -90,4 +105,4 @@ The model can make mistakes, especially on sentences that mix Amharic with other
 
 ---
 
-*Esubalew Kunta, 2024*
+*Esubalew Kunta, 2025*
